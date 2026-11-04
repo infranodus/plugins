@@ -1,6 +1,6 @@
 {
 	"name": "infranodus-plugins",
-	"description": "InfraNodus plugins for Claude Code, Codex and Grok Build: automatic memory stored as a knowledge graph in your InfraNodus account, and the core InfraNodus graph tools. Each plugin lives in its own repository; this catalog only points at them. The skills have their own marketplace, infranodus/skills.",
+	"description": "InfraNodus plugins for Claude Code, Codex and Grok Build: InfraNodus Graph Memory (automatic memory stored as a knowledge graph in your InfraNodus account, with GraphRAG recall), and the core InfraNodus graph tools. Each plugin lives in its own repository; this catalog only points at them. The skills have their own marketplace, infranodus/skills.",
 	"owner": {
 		"name": "InfraNodus",
 		"url": "https://github.com/infranodus/plugins"
@@ -12,7 +12,7 @@
 				"source": "github",
 				"repo": "infranodus/infranodus-memory-plugin"
 			},
-			"description": "Automatic memory for coding agents, stored as a knowledge graph in your InfraNodus account: at the end of a session it saves what was learned about the project; at the first prompt of the next one it recalls it, plus a gap the memory does not cover yet. Commands: /infranodus-memory:{status,save,recall,optimize,forget-last,off,on}.",
+			"description": "InfraNodus Graph Memory: automatic memory for coding agents, stored as a knowledge graph in your InfraNodus account. At the end of a session it saves what was learned about the project; at the first prompt of the next one it recalls it, plus a gap the memory does not cover yet. Recall is GraphRAG: it follows the graph's links by hop distance instead of matching text. Commands: /infranodus-memory:{status,save,recall,optimize,forget-last,off,on}.",
 			"category": "productivity",
 			"homepage": "https://infranodus.com/docs/claude-code-memory-plugin"
 		},

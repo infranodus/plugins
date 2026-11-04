@@ -2,7 +2,7 @@
 
 The marketplace for InfraNodus plugins for Claude Code, Codex (OpenAI) and
 Grok Build (xAI). This repository holds no plugin code: each plugin lives in
-its own repository, and the two catalogs here point at them. The InfraNodus
+its own repository, and the two catalogs here point at them. The memory plugin's id is `infranodus-memory`; its name is InfraNodus Graph Memory. The InfraNodus
 skills have their own marketplace, [infranodus/skills](https://github.com/infranodus/skills).
 
 ## Install
@@ -28,7 +28,7 @@ the CLI.
 
 | Plugin | What it does | Repository | Clients |
 |---|---|---|---|
-| `infranodus-memory` | Automatic memory for coding agents, stored as a knowledge graph in your InfraNodus account. Saves what a session learned about the project when it ends, recalls it at the first prompt of the next one, and names a gap the memory does not cover yet. [Docs](https://infranodus.com/docs/claude-code-memory-plugin) | [infranodus/infranodus-memory-plugin](https://github.com/infranodus/infranodus-memory-plugin) | Claude Code, Codex, Grok Build |
+| `infranodus-memory` | InfraNodus Graph Memory: automatic memory for coding agents, stored as a knowledge graph in your InfraNodus account. Saves what a session learned about the project when it ends, recalls it at the first prompt of the next one with GraphRAG retrieval along the graph's links, and names a gap the memory does not cover yet. [Docs](https://infranodus.com/docs/claude-code-memory-plugin) | [infranodus/infranodus-memory-plugin](https://github.com/infranodus/infranodus-memory-plugin) | Claude Code, Codex, Grok Build |
 | `infranodus` | The core InfraNodus plugin: the `/infranodus` skill and the InfraNodus MCP server. Knowledge graphs, topic clusters, content gaps, research questions, GraphRAG retrieval, SEO/GEO. Listed here for convenience; it is the same plugin as `infranodus@infranodus-skills`, so install one or the other, not both. | [infranodus/skills](https://github.com/infranodus/skills) (folder `infranodus`) | Claude Code, Grok Build |
 
 Both plugins register the InfraNodus MCP server at the same address. Claude
