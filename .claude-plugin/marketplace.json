@@ -1,6 +1,6 @@
 {
 	"name": "infranodus-plugins",
-	"description": "InfraNodus plugins for Claude Code, Codex and Grok Build: InfraNodus Graph Memory (automatic memory stored as a knowledge graph in your InfraNodus account, with GraphRAG recall), and the core InfraNodus graph tools. Each plugin lives in its own repository; this catalog only points at them. The skills have their own marketplace, infranodus/skills.",
+	"description": "InfraNodus plugins for Claude Code, Codex and Grok Build: InfraNodus Graph Memory (memory stored as a knowledge graph in your InfraNodus account, with GraphRAG recall), and the /infranodus skill. Both use your InfraNodus connector. Each plugin lives in its own repository; this catalog only points at them. The skills have their own marketplace, infranodus/skills.",
 	"owner": {
 		"name": "InfraNodus",
 		"url": "https://github.com/infranodus/plugins"
@@ -12,7 +12,7 @@
 				"source": "github",
 				"repo": "infranodus/infranodus-memory-plugin"
 			},
-			"description": "InfraNodus Graph Memory: automatic memory for coding agents, stored as a knowledge graph in your InfraNodus account. At the end of a session it saves what was learned about the project; at the first prompt of the next one it recalls it, plus a gap the memory does not cover yet. Recall is GraphRAG: it follows the graph's links by hop distance instead of matching text. Commands: /infranodus-memory:{status,save,recall,optimize,forget-last,off,on}.",
+			"description": "InfraNodus Graph Memory: memory for coding agents, stored as a knowledge graph in your InfraNodus account. Works with your InfraNodus connector: recall is GraphRAG (it follows the graph's links by hop distance instead of matching text), and the memory can be saved to and optimized on request. An optional API key turns on automatic memory, which uploads what each session learned about the project and recalls it at the first prompt of the next one. Commands: /infranodus-memory:{status,save,remember,recall,optimize,forget-last,off,on}.",
 			"category": "productivity",
 			"homepage": "https://infranodus.com/docs/claude-code-memory-plugin"
 		},
@@ -23,7 +23,7 @@
 				"url": "infranodus/skills",
 				"path": "infranodus"
 			},
-			"description": "[Also in infranodus/skills] Knowledge graph + gap finder for your notes, vault, repo or agent memory via the InfraNodus MCP server: topic clusters, content gaps, research questions, GraphRAG retrieval, SEO/GEO. Skip it if you already have infranodus@infranodus-skills.",
+			"description": "[Also in infranodus/skills] Requires the InfraNodus connector. Knowledge graph + gap finder for your notes, vault, repo or agent memory: topic clusters, content gaps, research questions, GraphRAG retrieval, SEO/GEO. Skip it if you already have infranodus@infranodus-skills.",
 			"category": "productivity",
 			"homepage": "https://infranodus.com/skills"
 		}

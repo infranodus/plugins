@@ -28,12 +28,13 @@ the CLI.
 
 | Plugin | What it does | Repository | Clients |
 |---|---|---|---|
-| `infranodus-memory` | InfraNodus Graph Memory: automatic memory for coding agents, stored as a knowledge graph in your InfraNodus account. Saves what a session learned about the project when it ends, recalls it at the first prompt of the next one with GraphRAG retrieval along the graph's links, and names a gap the memory does not cover yet. [Docs](https://infranodus.com/docs/claude-code-memory-plugin) | [infranodus/infranodus-memory-plugin](https://github.com/infranodus/infranodus-memory-plugin) | Claude Code, Codex, Grok Build |
-| `infranodus` | The core InfraNodus plugin: the `/infranodus` skill and the InfraNodus MCP server. Knowledge graphs, topic clusters, content gaps, research questions, GraphRAG retrieval, SEO/GEO. Listed here for convenience; it is the same plugin as `infranodus@infranodus-skills`, so install one or the other, not both. | [infranodus/skills](https://github.com/infranodus/skills) (folder `infranodus`) | Claude Code, Grok Build |
+| `infranodus-memory` | InfraNodus Graph Memory: memory for coding agents, stored as a knowledge graph in your InfraNodus account. Its commands recall, save and optimize what was learned about a project through your InfraNodus connector. An optional API key turns on automatic memory: it uploads what a session learned when it ends, recalls it at the first prompt of the next one with GraphRAG retrieval along the graph's links, and names a gap the memory does not cover yet. [Docs](https://infranodus.com/docs/claude-code-memory-plugin) | [infranodus/infranodus-memory-plugin](https://github.com/infranodus/infranodus-memory-plugin) | Claude Code, Codex, Grok Build |
+| `infranodus` | The `/infranodus` skill; uses your InfraNodus connector. Knowledge graphs, topic clusters, content gaps, research questions, GraphRAG retrieval, SEO/GEO. Listed here for convenience; it is the same plugin as `infranodus@infranodus-skills`, so install one or the other, not both. | [infranodus/skills](https://github.com/infranodus/skills) (folder `infranodus`) | Claude Code, Grok Build |
 
-Both plugins register the InfraNodus MCP server at the same address. Claude
-Code keeps one connection per address, so installing both, or adding them next
-to a server you already configured, does not create a second connection.
+Neither plugin brings an MCP server of its own. Connect the InfraNodus
+connector once (claude.ai **Settings → Connectors**, `https://mcp.infranodus.com`,
+or `claude mcp add --transport http infranodus https://mcp.infranodus.com`)
+and both use it.
 
 ## Adding a plugin
 
