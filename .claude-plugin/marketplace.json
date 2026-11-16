@@ -12,7 +12,7 @@
 				"source": "github",
 				"repo": "infranodus/infranodus-memory-plugin"
 			},
-			"description": "InfraNodus Graph Memory: memory for coding agents, stored as a knowledge graph in your InfraNodus account. Works with your InfraNodus connector: recall is GraphRAG (it follows the graph's links by hop distance instead of matching text), and the memory can be saved to and optimized on request. An optional API key turns on automatic memory, which uploads what each session learned about the project and recalls it at the first prompt of the next one. Commands: /infranodus-memory:{status,save,remember,recall,optimize,forget-last,off,on}.",
+			"description": "InfraNodus Graph Memory: memory for coding agents, stored as a knowledge graph in your InfraNodus account. Works with your InfraNodus connector: recall is GraphRAG (it follows the graph's links by hop distance instead of matching text), and the memory can be saved to, optimized and consolidated on request. An optional API key turns on automatic memory, which uploads what each session learned about the project and recalls it at the first prompt of the next one. Commands: /infranodus-memory:{status,save,remember,recall,optimize,dream,forget-last,off,on}.",
 			"category": "productivity",
 			"homepage": "https://infranodus.com/docs/claude-code-memory-plugin"
 		},
